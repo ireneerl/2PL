@@ -5,14 +5,14 @@ CFLAGS = -c -Wall -g -O0 -std=c++0x -Wunused-variable
 #LDFLAGS = -lpthread
 LDFLAGS = -pthread
 
-O2 = s2pl.o lib.o
+O2 = s2pl.o lib.o sorting_algorithm.o
 
 #
 # Rules for make
 #
-all: $(T2) 
+all: $(T2)
 
-$(T2): $(O2) 
+$(T2): $(O2)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 .cc.o:

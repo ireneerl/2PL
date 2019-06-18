@@ -21,7 +21,9 @@ worker(void *arg)
     list_locked[i] = tx->operation[i].data_.val;
   }
 
-  qsort(list_locked, MAX_OPERATION, sizeof(int), cmpfunc);
+  // qsort(list_locked, MAX_OPERATION, sizeof(int), cmpfunc);
+  insertion_sort(list_locked, MAX_OPERATION);
+  printArray(list_locked, MAX_OPERATION);
 
 
   for (int i = 0; i < MAX_OPERATION; i++) {
